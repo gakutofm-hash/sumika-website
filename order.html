@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>オーダーのご相談 — Gatelier</title>
+  <meta name="description" content="Gatelierへのオーダーのご相談はこちらから。サイズ・素材・デザインなど、お気軽にお聞かせください。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Gatelier" class="nav__logo-img"></a>
+      <ul class="nav__links">
+        <li><a href="index.html#concept">コンセプト</a></li>
+        <li><a href="index.html#flow">制作の流れ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="order.html">オーダー</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- オーダーページ -->
+  <main class="order-page">
+    <div class="order-page__header">
+      <h1>オーダーのご相談</h1>
+      <p>
+        まずはお気軽にお聞かせください。<br>
+        漠然としたイメージでも、詳細な要望でも、どちらでも大歓迎です。
+      </p>
+    </div>
+
+    <div class="order-form-wrap">
+
+      <!--
+        【設定方法】
+        Formspree (https://formspree.io) で無料アカウントを作成し、
+        フォームIDを取得後、下記 action の YOUR_FORM_ID を書き換えてください。
+        例: action="https://formspree.io/f/xabcdefg"
+      -->
+      <form id="order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <h2 class="form-section-title">お客様の情報</h2>
+
+        <div class="form-group">
+          <label for="name">お名前<span class="required">必須</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス<span class="required">必須</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          <p class="form-note">返信はこちらのアドレスにお送りします。</p>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">お電話番号（任意）</label>
+          <input type="tel" id="phone" name="phone" placeholder="090-0000-0000">
+        </div>
+
+        <h2 class="form-section-title">収納のご要望</h2>
+
+        <div class="form-group">
+          <label for="item">収納したいもの<span class="required">必須</span></label>
+          <select id="item" name="item" required>
+            <option value="">選択してください</option>
+            <option value="fountain-pen">万年筆・ペン類</option>
+            <option value="watch">時計</option>
+            <option value="camera">カメラ・レンズ</option>
+            <option value="stationery">文房具全般</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">収納したいアイテムの数（目安）</label>
+          <input type="text" id="quantity" name="quantity" placeholder="例: 万年筆10本、インク瓶20本">
+        </div>
+
+        <div class="form-group">
+          <label for="size">設置予定のスペース（目安）</label>
+          <input type="text" id="size" name="size" placeholder="例: デスク上 30cm × 20cm 程度">
+          <p class="form-note">おおよそで構いません。後でサンプルをお送りして一緒に確認します。</p>
+        </div>
+
+        <div class="form-group">
+          <label for="image">参考画像・イメージ（任意）</label>
+          <input type="url" id="image" name="image_url" placeholder="参考にしたい画像のURLがあれば貼り付けてください">
+        </div>
+
+        <div class="form-group">
+          <label for="message">ご要望・こだわり・ご質問</label>
+          <textarea id="message" name="message" placeholder="「ペンを1本ずつ区切りたい」「引き出しに入れたい」「こんな雰囲気にしたい」など、どんなことでもお気軽にどうぞ。"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="budget">ご予算（任意）</label>
+          <select id="budget" name="budget">
+            <option value="">選択しない</option>
+            <option value="under-15000">〜15,000円</option>
+            <option value="15000-30000">15,000〜30,000円</option>
+            <option value="over-30000">30,000円〜</option>
+            <option value="undecided">まだ決まっていない</option>
+          </select>
+          <p class="form-note">あくまで参考ですので、決まっていなくても大丈夫です。</p>
+        </div>
+
+        <!-- スパム防止用ハニーポット -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <!-- Formspree のサンクスページ（設定後に変更可） -->
+        <input type="hidden" name="_next" value="index.html">
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn--primary">送信する</button>
+          <p class="form-note" style="margin-top: 16px;">
+            送信後、2〜3営業日以内にご返信いたします。<br>
+            お急ぎの場合はXのDMからもお気軽にご連絡ください。
+          </p>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">Gatelier</p>
+      <p class="footer__text">
+        オーダーメイド収納 Gatelier<br>
+        &copy; 2026 Gatelier. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/gallery-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

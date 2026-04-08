@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ギャラリー — Gatelier</title>
+  <meta name="description" content="Gatelierの作品ギャラリー。オーダーメイド収納の実例をご覧ください。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Gatelier" class="nav__logo-img"></a>
+      <ul class="nav__links">
+        <li><a href="index.html#concept">コンセプト</a></li>
+        <li><a href="index.html#flow">制作の流れ</a></li>
+        <li><a href="gallery.html">ギャラリー</a></li>
+        <li><a href="order.html">オーダー</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ギャラリーページ -->
+  <main class="gallery-page">
+    <div class="order-page__header">
+      <h1 style="font-family: var(--font-serif); font-size: 32px; font-weight: 400; margin-bottom: 12px;">
+        作品ギャラリー
+      </h1>
+      <p style="font-size: 14px; color: #666;">
+        これまでお届けしたオーダーメイド収納の一部をご紹介します。
+      </p>
+    </div>
+
+    <div class="gallery-page__grid" id="gallery-page-grid">
+      <!-- JS で描画 -->
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="cta__title">あなただけの収納を作りませんか。</h2>
+      <p class="cta__desc">
+        「こんなものが欲しい」という気持ちから、一緒に始めましょう。
+      </p>
+      <a href="order.html" class="btn btn--white">オーダーを相談する</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">Gatelier</p>
+      <p class="footer__text">
+        オーダーメイド収納 Gatelier<br>
+        &copy; 2026 Gatelier. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/gallery-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

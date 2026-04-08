@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理画面 — Gatelier</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding-top: 40px; background: #f5f0e8; }
+  </style>
+</head>
+<body>
+
+  <div class="admin-page">
+    <h1>Gatelier 管理画面</h1>
+    <p style="font-size:13px; color:#666; margin-bottom: 32px;">
+      ※ このページは外部に公開しないでください。ギャラリーの管理専用ページです。
+    </p>
+
+    <!-- ギャラリー管理 -->
+    <div class="admin-card">
+      <h2>ギャラリー画像の管理</h2>
+
+      <div id="admin-gallery-grid" class="admin-gallery-grid">
+        <!-- JS で描画 -->
+      </div>
+
+      <hr style="border: none; border-top: 1px solid #e8e0d0; margin: 24px 0;">
+
+      <h3 style="font-size:14px; margin-bottom: 16px; color: #8b7355;">画像を追加する</h3>
+      <div class="admin-add-form">
+        <input type="text" id="add-src" placeholder="画像のパス（例: images/gallery/photo1.jpg）">
+        <input type="text" id="add-alt" placeholder="説明（例: 万年筆収納ケース）">
+        <input type="text" id="add-caption" placeholder="キャプション（任意）">
+        <button id="add-gallery-btn" class="btn btn--primary" style="white-space:nowrap;">追加する</button>
+      </div>
+      <p style="font-size:12px; color:#999; margin-top:12px;">
+        ※ 画像ファイルは <code>website/images/gallery/</code> フォルダに入れてから、そのパスを入力してください。<br>
+        ※ データはこのブラウザに保存されます。別のPCで管理する場合はデータを移行してください。
+      </p>
+    </div>
+
+    <div class="admin-card">
+      <h2>サイトへ移動</h2>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="index.html" class="btn btn--outline">トップページ</a>
+        <a href="gallery.html" class="btn btn--outline">ギャラリーページ</a>
+        <a href="order.html" class="btn btn--outline">オーダーページ</a>
+      </div>
+    </div>
+
+    <div class="admin-card">
+      <h2>設定メモ</h2>
+      <ul style="font-size:13px; color:#666; line-height:2.2; padding-left:16px;">
+        <li>オーダーフォームの送信先は <code>order.html</code> の <code>action</code> 属性で設定します</li>
+        <li>Formspree (<a href="https://formspree.io" target="_blank" style="color:#8b7355;">formspree.io</a>) で無料アカウントを作成 → フォームIDを取得 → <code>YOUR_FORM_ID</code> を書き換えてください</li>
+        <li>ブランド名・連絡先などは各HTMLファイルのフッター部分を編集してください</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/gallery-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
